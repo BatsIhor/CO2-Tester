@@ -7,19 +7,12 @@
 #include <FS.h>
 #include <Wire.h>
 #include <SensirionI2CScd4x.h>
-// #include <GxGDEH0213B72/GxGDEH0213B72.h> // Include the display driver for your specific display
 #include <Fonts/FreeMonoBold9pt7b.h> // Include a font
 
-// #include <GxGDE0213B1/GxGDE0213B1.h>      // 2.13" b/w  old panel , form GoodDisplay
-//  #include <GxGDEH0213B72/GxGDEH0213B72.h>  // 2.13" b/w  old panel , form GoodDisplay
-//  #include <GxGDEH0213B73/GxGDEH0213B73.h>  // 2.13" b/w  old panel , form GoodDisplay
-//  #include <GxGDEM0213B74/GxGDEM0213B74.h>  // 2.13" b/w  form GoodDisplay 4-color
-//  #include <GxGDEW0213M21/GxGDEW0213M21.h>  // 2.13"  b/w Ultra wide temperature , form GoodDisplay
 #include <GxDEPG0213BN/GxDEPG0213BN.h> // 2.13" b/w  form DKE GROUP
 
 #include GxEPD_BitmapExamples
 
-// FreeFonts from Adafruit_GFX
 #include <Fonts/FreeMonoBold9pt7b.h>
 #include <Fonts/FreeMonoBold12pt7b.h>
 #include <Fonts/FreeMonoBold18pt7b.h>
@@ -131,7 +124,7 @@ void loop()
         // Display the CO2 level on the screen using partial update
         display.setRotation(1);
         display.setTextColor(GxEPD_BLACK);
-        display.setTextSize(2.5);
+        display.setTextSize(3);
         display.setCursor(0, 30);
         display.fillRect(0, 30, 250, 50, GxEPD_WHITE); // Clear the area where the CO2 value is displayed
         display.print("CO2: ");
